@@ -46,7 +46,7 @@ public class SignUpPageFactory {
     public WebElement getSignUpWord() {
         return signUpWord;
     }
-
+//
     @FindBy(xpath = "//h4[.='Welcome Back!']")
     private WebElement welcomeBack;
 
