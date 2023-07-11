@@ -132,4 +132,8 @@ public class SignUpTest extends TestBase {
     }
 //     Thread.sleep(5000);
 //        Assert.assertNotEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php");
+//    /     Thread.sleep(5000);
+//        Assert.assertNotEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-eas
+//    /     Thread.sleep(5000);
+//        Assert.assertNotEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-eas
 }
