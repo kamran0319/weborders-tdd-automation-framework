@@ -130,4 +130,6 @@ public class SignUpTest extends TestBase {
 
         //negativetest password invalid format is passing
     }
+//     Thread.sleep(5000);
+//        Assert.assertNotEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php");
 }
