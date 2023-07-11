@@ -20,6 +20,13 @@ public class SignUpPageFactory {
 
 
     }
+    @FindBy(id = "emailerror")
+    private WebElement emailAlreadyUsed;
+
+    public WebElement getEmailAlreadyUsed() {
+        return emailAlreadyUsed;
+    }
+
     @FindBy(id = "exampleInputEmail1")
     private WebElement email;
 
