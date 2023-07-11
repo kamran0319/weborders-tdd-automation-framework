@@ -11,7 +11,7 @@ import pages.SignUpPage;
 import utils.ConfigReader;
 import utils.Driver;
 
-public class SignInTest extends TestBase {
+public class SignInTest  {
 
 
     @Test
@@ -20,15 +20,18 @@ public class SignInTest extends TestBase {
 
         SignInPage signInPage = new SignInPage();
         signInPage.SignInCredentials();
-
-
+        Driver.getDriver().quit();
 
     }
     @Test
-    public void negativeSignInPageObjectModel(){
+    public void negativeSignInPageObjectModel() throws InterruptedException {
 
         SignInPage signInPage = new SignInPage();
-        signInPage.negativeSignInCredentials();
+        Driver.getDriver().navigate().to("http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php");
+
+        signInPage.signIn(ConfigReader.getProperty("email"),"invalid");
+//        Thread.sleep(5000);
+        Assert.assertEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-east-2.elasticbeanstalk.com/dashboard.php");
 
 //        Driver.getDriver().findElement(By.xpath("//*[@id='auth-login']/div/div/div/div[1]/div/div[1]/text()[2]")).isDisplayed();
 

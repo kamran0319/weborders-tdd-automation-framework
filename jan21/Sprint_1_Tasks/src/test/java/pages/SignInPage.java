@@ -38,20 +38,19 @@ public class SignInPage {
         usernameField.sendKeys(email,Keys.TAB,password,Keys.ENTER);
     }
 
-    public void negativeSignInCredentials(){
+//    public void negativeSignInCredentials(){
+//
+//        WebDriver driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//        driver.navigate().to("http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php");
+//        usernameField = driver.findElement(By.xpath("//input[@id='exampleInputEmail1']"));
+//
+//        negativesignIn(ConfigReader.getProperty("email"),"password");
+////        driver.findElement(By.xpath("//*[@id='auth-login']/div/div/div/div[1]/div/div[1]/text()[2]")).isDisplayed();
+//    }
+//    public void negativesignIn(String email , String password){
+//        usernameField.sendKeys(email,Keys.TAB,password,Keys.ENTER);
+//    }
 
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.navigate().to("http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php");
-        usernameField = driver.findElement(By.xpath("//input[@id='exampleInputEmail1']"));
-
-        negativesignIn(ConfigReader.getProperty("email"),"password");
-//        driver.findElement(By.xpath("//*[@id='auth-login']/div/div/div/div[1]/div/div[1]/text()[2]")).isDisplayed();
-
-
-    }
-    public void negativesignIn(String email , String password){
-        usernameField.sendKeys(email,Keys.TAB,password,Keys.ENTER);
-    }
 }

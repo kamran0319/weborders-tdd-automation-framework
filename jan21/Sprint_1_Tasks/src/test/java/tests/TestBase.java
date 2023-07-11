@@ -21,11 +21,11 @@ public class TestBase {
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
+
 //    @AfterMethod(alwaysRun = true)
 //    public void tearDown(){
 //        Driver.quitDriver();
-
-
-
+//
 //    }
+
 }
