@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
 
-public class SignUpPageFactory {
+public class SignUpFildsPage {
 
 
-    public SignUpPageFactory(){
+    public SignUpFildsPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -37,9 +37,7 @@ public class SignUpPageFactory {
     @FindBy(id = "exampleInputPassword1")
     private WebElement password;
 
-    public WebElement getPassword() {
-        return password;
-    }
+    public WebElement getPassword() {return password;}
 
     @FindBy(xpath = "//div[@class='text-center']//small[1]")
     private WebElement dontHaveAccountText;

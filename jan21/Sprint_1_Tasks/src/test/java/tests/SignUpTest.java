@@ -1,14 +1,11 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SignUpPage;
-import pages.SignUpPageFactory;
+import pages.SignUpFildsPage;
 import utils.ConfigReader;
 import utils.Driver;
-import utils.SeleniumUtils;
 
 public class SignUpTest extends TestBase {
 
@@ -17,13 +14,12 @@ public class SignUpTest extends TestBase {
 
         new SignUpPage().signUpvalidCredentials();
         Assert.assertTrue(Driver.getDriver().getPageSource().contains("Registration Successful"));
-//    Driver.getDriver().findElement(By.xpath("//span[.='This email already used']")).isDisplayed();
 
         Thread.sleep(5000);
         Assert.assertEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php");
 
 
-        SignUpPageFactory signUpPageFactory = new SignUpPageFactory();
+        SignUpFildsPage signUpPageFactory = new SignUpFildsPage();
         Assert.assertTrue(signUpPageFactory.getSignUptext().isDisplayed());// Sign Up is displayed
 
         signUpPageFactory.getEmail().sendKeys(ConfigReader.getProperty("email"));//email fild
@@ -36,11 +32,11 @@ public class SignUpTest extends TestBase {
 //        SeleniumUtils.waitForVisibility(text,5 );
 //        Assert.assertTrue(Driver.getDriver().getPageSource().contains("This email already used"));
 
-        signUpPageFactory.getDontHaveAccountText().isDisplayed();// "don't have an account?" is displayed
-        signUpPageFactory.getSignUpWord().isDisplayed();// "sign up " is displayed
+        Assert.assertTrue(signUpPageFactory.getDontHaveAccountText().isDisplayed());// "don't have an account?" is displayed
+        Assert.assertTrue(signUpPageFactory.getSignUpWord().isDisplayed());// "sign up " is displayed
 
 
-        signUpPageFactory.getWelcomeBack().isDisplayed();// "Welcome Back " is displayed
+        Assert.assertTrue(signUpPageFactory.getWelcomeBack().isDisplayed());// "Welcome Back " is displayed
         signUpPageFactory.getSignInClick().click();
 
 
@@ -73,6 +69,7 @@ public class SignUpTest extends TestBase {
 
         //negative test firstname with 55 characters is passing
     }
+
     @Test
     public void negativeLastnameWithNumber() throws InterruptedException {
         SignUpPage signUpPage = new SignUpPage();
@@ -84,6 +81,7 @@ public class SignUpTest extends TestBase {
 
         //negative test lastname fild with numbers is passing
     }
+
     @Test
     public void negativeLastnameMoreThan50Ch() throws InterruptedException {
         SignUpPage signUpPage = new SignUpPage();
@@ -95,6 +93,7 @@ public class SignUpTest extends TestBase {
 
         //negative test lastname with 55 characters is passing
     }
+
     @Test
     public void negativeEmail() throws InterruptedException {
         SignUpPage signUpPage = new SignUpPage();
@@ -106,6 +105,7 @@ public class SignUpTest extends TestBase {
 
         //negative test email invalid format is passing
     }
+
     @Test
     public void negativeEmailmoreThan255ch() throws InterruptedException {
         SignUpPage signUpPage = new SignUpPage();
@@ -119,6 +119,7 @@ public class SignUpTest extends TestBase {
 
         //negative test email invalid format is passing
     }
+
     @Test
     public void negativePassword() throws InterruptedException {
         SignUpPage signUpPage = new SignUpPage();
@@ -130,10 +131,4 @@ public class SignUpTest extends TestBase {
 
         //negativetest password invalid format is passing
     }
-//     Thread.sleep(5000);
-//        Assert.assertNotEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php");
-//    /     Thread.sleep(5000);
-//        Assert.assertNotEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-eas
-//    /     Thread.sleep(5000);
-//        Assert.assertNotEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-eas
 }
