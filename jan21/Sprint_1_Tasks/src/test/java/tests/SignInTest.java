@@ -1,41 +1,64 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.SignInFildsPage;
 import pages.SignInPage;
+import pages.SignUpFildsPage;
 import pages.SignUpPage;
 import utils.ConfigReader;
 import utils.Driver;
+import utils.SeleniumUtils;
 
-public class SignInTest  {
+public class SignInTest extends TestBase {
 
+    public void MoveSignUp() {
+
+    }
 
     @Test
-    public void SignInPageObjectModel(){
+    public void SignInPage() {
 
+        SignInFildsPage signInFildsPage = new SignInFildsPage();
+        signInFildsPage.getMovesigninpage().click();
 
         SignInPage signInPage = new SignInPage();
         signInPage.SignInCredentials();
-        Driver.getDriver().quit();
+
+    }
+
+    @Test
+    public void SignInPagetest() {
+
+        SignInFildsPage signInFildsPage = new SignInFildsPage();
+        signInFildsPage.getMovesigninpage().click();
+        Assert.assertTrue(signInFildsPage.getWellcomeText().isDisplayed());
+        Assert.assertFalse(signInFildsPage.getSigninbutton().isEnabled());// signin button  should not be able
+    }
+@Test
+    public void negativeSigntest(){
+
+        SignInFildsPage signInFildsPage = new SignInFildsPage();
+        signInFildsPage.getMovesigninpage().click();
+
+        SignInPage signInPage = new SignInPage();
+        signInPage.SignIn("Invalid", ConfigReader.getProperty("password"));
+        Assert.assertNotEquals(Driver.getDriver().getCurrentUrl(),"http://qa-duobank.us-east-2.elasticbeanstalk.com/dashboard.php");
 
     }
     @Test
-    public void negativeSignInPageObjectModel() throws InterruptedException {
+   public void negativeSignInPasswordtest() throws InterruptedException {
+        SignInFildsPage signInFildsPage= new SignInFildsPage();
+        signInFildsPage.getMovesigninpage().click();
 
         SignInPage signInPage = new SignInPage();
-        Driver.getDriver().navigate().to("http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php");
-
-        signInPage.signIn(ConfigReader.getProperty("email"),"invalid");
-//        Thread.sleep(5000);
-        Assert.assertEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-east-2.elasticbeanstalk.com/dashboard.php");
-
-//        Driver.getDriver().findElement(By.xpath("//*[@id='auth-login']/div/div/div/div[1]/div/div[1]/text()[2]")).isDisplayed();
-
-    }
+        signInPage.SignIn(ConfigReader.getProperty("email"),"invalid");
+        Assert.assertNotEquals(Driver.getDriver().getCurrentUrl(),"http://qa-duobank.us-east-2.elasticbeanstalk.com/dashboard.php");
 
 
+        SignUpFildsPage signUpFildsPage =new SignUpFildsPage();
+        Assert.assertTrue(signUpFildsPage.getDontHaveAccountText().isDisplayed());// "don't have an account?" is displayed
+        Assert.assertTrue(signUpFildsPage.getSignUpWord().isDisplayed());// "sign up " is displayed
+
+   }
 }

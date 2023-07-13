@@ -27,7 +27,6 @@ public class Driver {
                 default -> throw new IllegalArgumentException(browser + " -> this browser is not supported or invalid");
             }
 
-
         }
 
         return driver; // otherwise return the initialized driver object
