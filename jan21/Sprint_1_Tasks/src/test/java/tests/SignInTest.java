@@ -60,5 +60,8 @@ public class SignInTest extends TestBase {
         Assert.assertTrue(signUpFildsPage.getDontHaveAccountText().isDisplayed());// "don't have an account?" is displayed
         Assert.assertTrue(signUpFildsPage.getSignUpWord().isDisplayed());// "sign up " is displayed
 
+
+        System.out.println(" pushing");
+
    }
 }
