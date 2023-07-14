@@ -61,7 +61,7 @@ public class SignInTest extends TestBase {
         Assert.assertTrue(signUpFildsPage.getSignUpWord().isDisplayed());// "sign up " is displayed
 
 
-        System.out.println("jlkjlj");
+
 
    }
 }
