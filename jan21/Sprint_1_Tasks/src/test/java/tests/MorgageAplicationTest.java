@@ -49,7 +49,7 @@ public class MorgageAplicationTest extends TestBase{
         mortgageAplicationFildsPage.getSave().click();
 
 
-
+        System.out.println("hi");
 
 
     }
