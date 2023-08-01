@@ -15,7 +15,7 @@ public class SignUpTest extends TestBase {
         new SignUpPage().signUpvalidCredentials();
         Assert.assertTrue(Driver.getDriver().getPageSource().contains("Registration Successful"));
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         Assert.assertEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php");
 
 
@@ -26,11 +26,7 @@ public class SignUpTest extends TestBase {
 
 
         signUpPageFactory.getPassword().sendKeys(ConfigReader.getProperty("password"));// password fild
-//        Thread.sleep(2500);
-//        Assert.assertTrue(signUpPageFactory.getEmailAlreadyUsed().isDisplayed());
-//        Driver.getDriver().findElement(By.id("emailerror"));
-//        SeleniumUtils.waitForVisibility(text,5 );
-//        Assert.assertTrue(Driver.getDriver().getPageSource().contains("This email already used"));
+
 
         Assert.assertTrue(signUpPageFactory.getDontHaveAccountText().isDisplayed());// "don't have an account?" is displayed
         Assert.assertTrue(signUpPageFactory.getSignUpWord().isDisplayed());// "sign up " is displayed
@@ -52,7 +48,7 @@ public class SignUpTest extends TestBase {
         signUpPage.signUp("1544296543", ConfigReader.getProperty("lastname"),
                 ConfigReader.getProperty("email"), ConfigReader.getProperty("password"));
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         Assert.assertNotEquals(Driver.getDriver().getCurrentUrl(), "http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php");
 
         //negative test name fild with numbers is passing
@@ -60,6 +56,7 @@ public class SignUpTest extends TestBase {
 
     @Test
     public void negativeNameMoreThan50Ch() throws InterruptedException {
+
         SignUpPage signUpPage = new SignUpPage();
         signUpPage.signUp("zxcvbnmlkjhgfdsaqwertyuiopasdfghjklmnbvcxzasdfghjklpoiu", ConfigReader.getProperty("lastname"),
                 ConfigReader.getProperty("email"), ConfigReader.getProperty("password"));

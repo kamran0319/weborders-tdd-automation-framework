@@ -57,6 +57,8 @@ public class MortgageAplicationFildsPage {
     @FindBy(xpath = "//input[@id='b_cell']")
     private WebElement CELLPHONE;
 
+    @FindBy(xpath = "//input[@id='b_home']")
+    private WebElement HOMEPHONE;
 
     @FindBy(linkText = "Next")
     private WebElement Next;

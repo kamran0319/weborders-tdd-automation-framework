@@ -43,15 +43,30 @@ public class MorgageAplicationTest extends TestBase{
         select.selectByVisibleText("Married");
 
         mortgageAplicationFildsPage.getCELLPHONE().sendKeys("9133124054",Keys.TAB);
-        mortgageAplicationFildsPage.getNext().click();
-
-        mortgageAplicationFildsPage.getMONTHLYRENTALPAYMENT().sendKeys("2100");
-        mortgageAplicationFildsPage.getSave().click();
 
 
-        System.out.println("hi");
+        mortgageAplicationFildsPage.getHOMEPHONE().sendKeys("9133124054",Keys.TAB);
+
+
 
 
     }
+    @Test
+    public void negativeTest1() throws InterruptedException {
+        SignInFildsPage signInFildsPage = new SignInFildsPage();
+        signInFildsPage.getMovesigninpage().click();
+
+        SignInPage signInPage = new SignInPage();
+        signInPage.SignInCredentials();
+
+        MortgageAplicationFildsPage mortgageAplicationFildsPage = new MortgageAplicationFildsPage();
+        Thread.sleep(2000);
+        mortgageAplicationFildsPage.getMortgageApplication().click();
+        mortgageAplicationFildsPage.getPURCHASEPRICE().sendKeys("350000");
+        mortgageAplicationFildsPage.getDOWNPAYMENTAMOUNT().sendKeys("25000");
+        mortgageAplicationFildsPage.getNextbuttom().click();
+
+    }
+
 
 }
