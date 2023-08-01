@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Morgage" parallel="methods" thread-count="5">
+    <test name="MorgageAplication Test">
+
+        <classes>
+            <class name="tests.MorgageAplicationTest"></class>
+        </classes>
+
+    </test>
+
+    </suite>
+

@@ -22,10 +22,10 @@ public class TestBase {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
 
-//    @AfterMethod(alwaysRun = true)
-//    public void tearDown(){
-//        Driver.quitDriver();
+    @AfterMethod(alwaysRun = true)
+    public void tearDown(){
+        Driver.quitDriver();
 
-//    }
+    }
 
 }

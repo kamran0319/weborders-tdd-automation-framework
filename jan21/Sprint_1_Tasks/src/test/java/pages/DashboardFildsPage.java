@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
 @Getter
+@AllArgsConstructor
 public class DashboardFildsPage {
 
     public DashboardFildsPage() {
