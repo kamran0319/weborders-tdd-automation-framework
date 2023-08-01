@@ -7,6 +7,7 @@ import io.cucumber.java.en.When;
 import pages.LoginPage;
 import utils.ConfigReader;
 import utils.Driver;
+import utils.SeleniumUtils;
 
 import java.time.Duration;
 
@@ -24,8 +25,8 @@ public class loginStepDefs {
         LoginPage loginPage = new LoginPage();
         loginPage.getEmail().sendKeys(ConfigReader.getProperty("email"));
         loginPage.getPassword().sendKeys(ConfigReader.getProperty("password"));
-        Thread.sleep(800);
-        loginPage.getSignInButton().click();
+        Thread.sleep(1000);
+        SeleniumUtils.jsClick(loginPage.getSignInButton());
 
 
     }

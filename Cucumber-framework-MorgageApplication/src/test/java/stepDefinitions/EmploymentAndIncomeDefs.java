@@ -27,9 +27,7 @@ public class EmploymentAndIncomeDefs {
 
 
         EmploymentAndIncomePage employmentAndIncomePage = new EmploymentAndIncomePage();
-
-        employmentAndIncomePage.getMONTHLY_RENTAL_PAYMENT_EaI().sendKeys("2000");
-        Thread.sleep(2000);
+        Thread.sleep(500);
 
 
         SeleniumUtils.jsClick(expensesPage.getNext_EX());
