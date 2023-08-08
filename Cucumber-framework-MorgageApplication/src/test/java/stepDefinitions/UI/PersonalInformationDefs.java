@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.UI;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
@@ -9,12 +9,12 @@ import pages.PersonalInformationPage;
 import pages.PreapprovalDetailsPage;
 
 public class PersonalInformationDefs {
-    @Then("Fill Preapproval Details")
-    public void fill_preapproval_details() throws InterruptedException {
-        PreapprovalDetailsDefs preapprovalDetailsDefs = new PreapprovalDetailsDefs();
-        preapprovalDetailsDefs.click_on_realtor_information();
-
-    }
+//    @Then("Fill Preapproval Details")
+//    public void fill_preapproval_details() throws InterruptedException {
+//        PreapprovalDetailsDefs preapprovalDetailsDefs = new PreapprovalDetailsDefs();
+//        preapprovalDetailsDefs.click_on_realtor_information();
+//
+//    }
 
 //    @Given("Click on No Co-borrower")
 //    public void click_on_no_co_borrower() {

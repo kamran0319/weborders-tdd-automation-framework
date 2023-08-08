@@ -7,8 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Cucumber-framework-MorgageApplication" />
+        <module name="duotify-cucumber-framework" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Cucumber-framework-MorgageApplication" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
