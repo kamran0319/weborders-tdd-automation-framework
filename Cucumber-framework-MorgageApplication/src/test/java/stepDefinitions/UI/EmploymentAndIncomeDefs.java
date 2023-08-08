@@ -1,8 +1,9 @@
-package stepDefinitions;
+package stepDefinitions.UI;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.EmploymentAndIncomePage;
@@ -18,19 +19,19 @@ public class EmploymentAndIncomeDefs {
     public void click_employer_name_and_fill_all_section() throws InterruptedException {
 
         Faker faker = new Faker();
-
-        ExpensesDefs expensesDefs = new ExpensesDefs();
-        expensesDefs.add_monthly_rental();
-
-        ExpensesPage expensesPage = new ExpensesPage();
-        expensesPage.getMONTHLY_RENTAL_PAYMENT_EX().sendKeys("2000");
-
-
+//
+//        ExpensesDefs expensesDefs = new ExpensesDefs();
+//        expensesDefs.add_monthly_rental();
+//
+//        ExpensesPage expensesPage = new ExpensesPage();
+//        expensesPage.getMONTHLY_RENTAL_PAYMENT_EX().sendKeys("2000");
+//
+//
         EmploymentAndIncomePage employmentAndIncomePage = new EmploymentAndIncomePage();
-        Thread.sleep(500);
-
-
-        SeleniumUtils.jsClick(expensesPage.getNext_EX());
+//        Thread.sleep(500);
+//
+//
+//        SeleniumUtils.jsClick(expensesPage.getNext_EX());
 
 
         employmentAndIncomePage.getEMPLOYER_NAME_EaI().sendKeys(faker.name().firstName(), Keys.TAB
@@ -46,4 +47,10 @@ public class EmploymentAndIncomeDefs {
         Assert.assertTrue(new EmploymentAndIncomePage().getPreApproval_Inquiry_text_EaI().isDisplayed());
     }
 
+
+    @When("Click Next EaI")
+    public void clickNextEaI() {
+        EmploymentAndIncomePage employmentAndIncomePage = new EmploymentAndIncomePage();
+        employmentAndIncomePage.getNext_EaI().click();
+    }
 }

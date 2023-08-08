@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.UI;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
@@ -6,10 +6,9 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
-import pages.MortgageAplicationPage;
 import pages.PreapprovalDetailsPage;
+import stepDefinitions.UI.MortgageAplicationDefs;
 import utils.Driver;
-import utils.SeleniumUtils;
 
 public class PreapprovalDetailsDefs {
 
@@ -22,7 +21,6 @@ public class PreapprovalDetailsDefs {
 
     @Then("Click on Realtor Information")
     public void click_on_realtor_information() throws InterruptedException {
-
         Faker faker = new Faker();
         PreapprovalDetailsPage preapprovalDetailsPage = new PreapprovalDetailsPage();
         preapprovalDetailsPage.getRealtorinfo().sendKeys(faker.name().firstName(), Keys.TAB, Keys.TAB);

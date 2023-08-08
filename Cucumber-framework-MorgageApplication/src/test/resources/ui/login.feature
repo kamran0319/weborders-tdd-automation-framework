@@ -1,3 +1,5 @@
+
+@login
 Feature: login
   As a user, I should be able to login.
 

@@ -1,10 +1,9 @@
-package stepDefinitions;
+package stepDefinitions.UI;
 
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.LoginPage;
 import pages.MortgageAplicationPage;
 
 public class MortgageAplicationDefs  {
