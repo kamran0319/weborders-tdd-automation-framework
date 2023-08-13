@@ -1,6 +1,6 @@
-
+@UI
 Feature: Credit Report
-  @login
+
   Scenario: Fill Credit Report page
     Given I am on the Mortgage Application
     Then Click on Realtor Information

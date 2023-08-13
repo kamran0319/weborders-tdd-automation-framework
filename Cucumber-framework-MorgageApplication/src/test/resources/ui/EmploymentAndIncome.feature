@@ -1,4 +1,4 @@
-@login
+@UI
 Feature: Employment And Income
 
   Scenario: Fill Employment And Income page

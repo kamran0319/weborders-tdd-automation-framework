@@ -1,4 +1,4 @@
-@Eco
+@UI
 Feature: Econsent
 
   Scenario: Fill Econsent page

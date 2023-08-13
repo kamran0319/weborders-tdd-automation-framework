@@ -39,7 +39,7 @@ public class Hooks {
             scenario.attach(screenshotFile, "image/png", "screenshot");
         }
 
-//        Driver.quitDriver();
+        Driver.quitDriver();
     }
     @After("@DB")
     public void tearDownScenario2(){

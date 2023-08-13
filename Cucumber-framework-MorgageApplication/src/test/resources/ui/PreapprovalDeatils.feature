@@ -1,6 +1,7 @@
+@UI
 Feature: Preapproval Details
 
-@login
+
   Scenario: Fill  Preapproval Details
     Given I am on the Mortgage Application
 
