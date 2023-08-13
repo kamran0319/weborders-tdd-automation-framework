@@ -41,4 +41,3 @@ jobs:
         with:
           name: Report File
           path: target/cucumber-report/*.html
-
