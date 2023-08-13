@@ -1,0 +1,22 @@
+
+- name: Setup Maven
+  uses: actions/cache@v3
+  with:
+    path: ~/.m2
+    key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+    restore-keys: ${{ runner.os }}-m2
+
+- name: Setup Chrome Browser and ChromeDriver
+  uses: browser-actions/setup-chrome@v1
+  with:
+    chrome-version: 'stable'
+
+- name: Run Smoke Tests in headless Chrome
+  run: mvn test -D cucumber.filter.tags="@smoke" -Dbrowser=chromeheadless
+
+- name: Generate Report
+  if: always()
+  uses: actions/upload-artifact@v3
+  with:
+    name: Report File
+    path: target/cucumber-report/report.html

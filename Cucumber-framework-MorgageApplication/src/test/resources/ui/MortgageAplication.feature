@@ -1,7 +1,8 @@
+@Smoke
 Feature: Mortgage Application
 
 
-@login
+
   Scenario: Get  Mortgage Application
     Given I am on the homepage
     When I click on Mortgage Application

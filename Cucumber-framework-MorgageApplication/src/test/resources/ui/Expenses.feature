@@ -1,4 +1,4 @@
-@login
+@UI
 Feature: Expenses
 
   Scenario: Fill Expenses page

@@ -1,5 +1,4 @@
-
-@login
+@UI
 Feature: Personal Information
 
 
