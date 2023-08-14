@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Cucumber-framework-MorgageApplication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cucumber-framework-MorgageApplication/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/duotify-cucumber-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/duotify-cucumber-framework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jan21/MavenDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jan21/MavenDemo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jan21/Sprint_1_Tasks/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jan21/Sprint_1_Tasks/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jan21/selenium-demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jan21/selenium-demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jan21/testnG-exemple/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jan21/testnG-exemple/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jan21/weborders-tdd-automation-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jan21/weborders-tdd-automation-framework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/morgage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/morgage/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

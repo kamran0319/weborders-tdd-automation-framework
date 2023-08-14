@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/jan21/MavenDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/jan21/selenium-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/jan21/Sprint_1_Tasks/pom.xml" />
+        <option value="$PROJECT_DIR$/jan21/testnG-exemple/pom.xml" />
+        <option value="$PROJECT_DIR$/jan21/weborders-tdd-automation-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/morgage/pom.xml" />
+        <option value="$PROJECT_DIR$/duotify-cucumber-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/Cucumber-framework-MorgageApplication/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
+</project>
