@@ -32,6 +32,7 @@ public class ExpensesDefs {
 
         Faker faker = new Faker();
         expensesPage.getMONTHLY_RENTAL_PAYMENT_EX().sendKeys(String.valueOf(faker.random().nextInt(1000, 3000)));
+        Thread.sleep(1000);
         expensesPage.getNext_EX().click();
     }
 

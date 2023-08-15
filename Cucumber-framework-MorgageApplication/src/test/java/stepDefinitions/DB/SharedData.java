@@ -27,7 +27,13 @@ public class SharedData {
     private String album;
 
     private LocalDateTime timestamp;
+   private List<String> columnNames;
+  private   List<List<Object>> value;
 
+    private List<List<Object>> mortgageActual;
+    private String fieldName;
+   private Integer idNum;
+   private String negValue;
 
 
 }
